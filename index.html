@@ -91,7 +91,7 @@
     <script>
         function enviarWhatsApp(event) {
             event.preventDefault();
-            
+
             const formaPagamento = [...document.querySelectorAll('input[name="formaPagamento"]:checked')]
                 .map(el => el.nextSibling.textContent.trim()).join(", ");
             const tipoPessoa = [...document.querySelectorAll('input[name="tipoPessoa"]:checked')]
@@ -101,8 +101,16 @@
             const tipoPlano = [...document.querySelectorAll('input[name="tipoPlano"]:checked')]
                 .map(el => el.nextSibling.textContent.trim()).join(", ");
             const grupo = document.getElementById('grupo').value;
-            const credito = document.getElementById('credito').value || document.getElementById('creditoCustom').value;
-            const lance = document.getElementById('lance').value || document.getElementById('lanceCustom').value;
+            
+            // Crédito e lance com verificação de valores "random"
+            const credito = document.getElementById('credito').value === 'random' 
+                ? document.getElementById('creditoCustom').value 
+                : document.getElementById('credito').value;
+            
+            const lance = document.getElementById('lance').value === 'random' 
+                ? document.getElementById('lanceCustom').value 
+                : document.getElementById('lance').value;
+
             const telefone = document.getElementById('telefone').value;
             const email = document.getElementById('email').value;
             const cpf = document.getElementById('cpf').value;
@@ -116,7 +124,7 @@ Você passa essa venda pra mim, fazendo favor?
 *Tipo de plano:* ${tipoPlano}
 *Grupo:* ${grupo}
 *Crédito:* ${credito}
-*Lance:* ${lance}%
+*Lance:* ${lance}
 *Telefone:* ${telefone}
 *E-mail:* ${email}
 *Meu CPF:* ${cpf}`;
