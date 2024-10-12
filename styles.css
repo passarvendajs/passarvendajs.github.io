@@ -1,0 +1,182 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: 
+    radial-gradient(circle, rgba(38, 88, 171, 0.8), rgba(255, 255, 255, 0.8)),
+    url('fundo\ \(2\).png');
+    background-size: cover; /* Para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    margin: 0;
+    padding: 20px;
+}
+
+/* O resto do seu CSS continua aqui... */
+
+
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px 3px rgb(0, 0, 0, 0.2);
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: 600;
+    padding: 0 10px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#creditoCustom, #lanceCustom {
+    display: none;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+option {
+    font-family: 'Poppins', sans-serif;
+    width: 40%; /* Ajustado para 100% */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+/* Estilizando os placeholders */
+input::placeholder,
+textarea::placeholder {
+    color: #666;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#button1 {
+    background-color: #ff0000;
+}
+
+#button2 {
+    background-color: green;
+}
+
+#creditoCustom1 {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.credito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap; /* Permite a quebra de linha */
+}
+
+.credito-item label {
+    margin-right: 10px;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.credito-item select,
+.credito-item input {
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.quantidade {
+    width: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.label-grupo, .label-lance, .label-telefone, .label-email, .label-cpf {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select,
+    option {
+        width: 100%; /* Ajuste a largura para dispositivos menores */
+    }
+
+    button {
+        width: 100%; /* Botões ocupam a largura total */
+    }
+
+    .credito-item {
+        flex-direction: column; /* Alinhamento vertical */
+    }
+
+    .credito-item input,
+    .credito-item select {
+        width: 100%; /* Itens ocupam a largura total */
+        margin: 5px 0; /* Margens verticais */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em; /* Tamanho do texto menor em telas pequenas */
+    }
+
+    p {
+        font-size: 0.9em; /* Tamanho do parágrafo menor */
+    }
+}
