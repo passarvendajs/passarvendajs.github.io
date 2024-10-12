@@ -9,9 +9,6 @@ body {
     padding: 20px;
 }
 
-/* O resto do seu CSS continua aqui... */
-
-
 .logo {
     display: block;
     margin: 0 auto 20px;
@@ -72,6 +69,10 @@ option {
     border-radius: 5px;
     box-sizing: border-box;
     color: #000;
+    font-size: 16px; /* Tamanho da fonte para evitar zoom no iOS */
+    -webkit-appearance: none; /* Remove a aparência padrão em iOS */
+    -moz-appearance: none; /* Remove a aparência padrão em Firefox */
+    appearance: none; /* Remove a aparência padrão em outros navegadores */
 }
 
 /* Estilizando os placeholders */
