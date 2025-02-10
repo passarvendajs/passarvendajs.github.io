@@ -10,9 +10,13 @@ function adicionarCarta() {
         <label>Carta ${contadorCartas}:</label>
         <select id="credito${contadorCartas}" onchange="toggleCustomInput(this, 'creditoCustom${contadorCartas}')">
             <option value="">Selecione um valor</option>
-            <option value="R$ 49.605,07">R$ 49.605,07</option>
-            <option value="R$ 58.624,07">R$ 58.624,07</option>
-            <option value="R$ 67.643,07">R$ 67.643,07</option>
+            <option value="R$ 51.574,09">R$ 51.574,09</option>
+            <option value="R$ 60.951,09">R$ 60.951,09</option>
+            <option value="R$ 70.328,09">R$ 70.328,09</option>
+            <option value="R$ 75.016,00">R$ 75.016,00</option>
+            <option value="R$ 84.393,00">R$ 84.393,00</option>
+            <option value="R$ 93.770,00">R$ 93.770,00</option>
+            <option value="R$ 103.147,00">R$ 103.147,00</option>
             <option value="random">Valor Aleatório</option>
         </select>
         <input type="text" id="creditoCustom${contadorCartas}" placeholder="Valor" oninput="formatarValor(event, 'credito${contadorCartas}')" style="display:none;">
