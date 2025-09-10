@@ -10,13 +10,14 @@ function adicionarCarta() {
         <label>Carta ${contadorCartas}:</label>
         <select id="credito${contadorCartas}" onchange="toggleCustomInput(this, 'creditoCustom${contadorCartas}')">
             <option value="">Selecione um valor</option>
-            <option value="R$ 51.574,09">R$ 51.574,09</option>
-            <option value="R$ 60.951,09">R$ 60.951,09</option>
-            <option value="R$ 70.328,09">R$ 70.328,09</option>
-            <option value="R$ 75.016,00">R$ 75.016,00</option>
-            <option value="R$ 84.393,00">R$ 84.393,00</option>
-            <option value="R$ 93.770,00">R$ 93.770,00</option>
-            <option value="R$ 103.147,00">R$ 103.147,00</option>
+            <option value="R$ 54.995,13">R$ 54.995,13</option>
+            <option value="R$ 59.994,00">R$ 59.994,00</option>
+            <option value="R$ 64.994,13">R$ 64.994,13</option>
+            <option value="R$ 74.993,13">R$ 74.993,13</option>
+            <option value="R$ 79.992,00">R$ 79.992,00</option>
+            <option value="R$ 89.991,00">R$ 89.991,00</option>
+            <option value="R$ 99.990,00">R$ 99.990,00</option>
+            <option value="R$ 109.989,00">R$ 109.989,00</option>
             <option value="random">Valor Aleatório</option>
         </select>
         <input type="text" id="creditoCustom${contadorCartas}" placeholder="Valor" oninput="formatarValor(event, 'credito${contadorCartas}')" style="display:none;">
@@ -156,3 +157,4 @@ function formatarValor(event, creditoId) {
         document.getElementById(creditoId).value = 'random'; // Define o select como 'random'
     }
 }
+
